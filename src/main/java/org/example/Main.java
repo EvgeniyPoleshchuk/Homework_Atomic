@@ -26,7 +26,9 @@ public class Main {
         thread1.start();
         Thread thread2 = new Thread(() -> {
             for (String text : texts) {
-                textLength(text);
+                if(isSameCharacters(text)) {
+                    textLength(text);
+                }
             }
         });
         thread2.start();
